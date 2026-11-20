@@ -4,7 +4,8 @@ import os
 
 print("File Operation Started")
 
-# Load file
+# Load file 
+
 while True:
     fname = input("Enter the CSV file name for operations: ")
     if not os.path.exists(fname):
@@ -19,7 +20,9 @@ while True:
         print(f"ERROR: Could not read CSV file or 'Name' column is missing. Details: {e}")
         sys.exit(1)
 
+
 # Menu loop
+
 while True:
     try:
         print("\nEnter the operation to be performed:")
