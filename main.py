@@ -141,11 +141,3 @@ while True:
         case _:  # Invalid input
             print(f"ERROR: Choice '{ch}' is not valid (1-6).")
 
-    # Ask to save changes
-    save = input("\nDo you want to save changes to file? (y/n): ").lower()
-    if save == 'y':
-        try:
-            df.to_csv(fname)
-            print(f"SUCCESS: Changes saved to '{fname}'.")
-        except Exception as e:
-            print(f"ERROR: Failed to save file. Details: {e}")
