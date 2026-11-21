@@ -134,11 +134,11 @@ while True:
             else:
                 print("Invalid display choice.")
 
-        case 5:  # Restore backup
+        case 5:  # Restore  backup
             df = df_backup.copy()
             print("\nBackup restored successfully!")
 
-        case _:  # Invalid input
+        case _:  # Invalid  input 
             print(f"ERROR: Choice '{ch}' is not valid (1-6).")
 
     # Ask to save changes
