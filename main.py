@@ -208,9 +208,7 @@ while True:
 
 
     elif ch == 5:
-
         # Restore Backup
-
         df = df_backup.copy()
         print("\nBackup restored successfully!")
 
