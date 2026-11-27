@@ -100,11 +100,9 @@ while True:
     elif ch == 2:
 
         # Searching Operations
-
         print("\nSearch Options:")
         print("1: Search by index (Name)")
         print("2: Search across all columns")
-
         try:
             s_choice = int(input("Choice: "))
         except ValueError:
