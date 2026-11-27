@@ -1,4 +1,3 @@
-
 import pandas as pd
 import os
 import sys
@@ -7,8 +6,8 @@ print("File Operation Started")
 
 # Loading CSV File
 
-while True: 
-     
+while True:
+
     fname = input("Enter the CSV file name for operations: ")
 
     if os.path.exists(fname):
@@ -35,18 +34,25 @@ while True:
     print("\nEnter the operation to be performed:")
     print("1: Cleaning | 2: Searching | 3: Replace")
     print("4: Display | 5: Restore Backup | 6: Exit")
+    print("7: Count Records")
 
     try:
-        ch = int(input("Choice: "))  
+        ch = int(input("Choice: "))
     except ValueError:
-        print("ERROR: Please enter a valid number (1-6).")
+        print("ERROR: Please enter a valid number (1-7).")
         continue
 
     if ch == 6:
         print("\nExiting program. Goodbye! 👋")
         break
 
-    if ch == 1:
+    elif ch == 7:
+
+        # Count Records
+
+        print(f"\nTotal number of records: {len(df)}")
+
+    elif ch == 1:
 
         # Cleaning Operations
 
@@ -100,9 +106,11 @@ while True:
     elif ch == 2:
 
         # Searching Operations
+
         print("\nSearch Options:")
         print("1: Search by index (Name)")
         print("2: Search across all columns")
+
         try:
             s_choice = int(input("Choice: "))
         except ValueError:
@@ -206,13 +214,15 @@ while True:
 
 
     elif ch == 5:
+
         # Restore Backup
+
         df = df_backup.copy()
         print("\nBackup restored successfully!")
 
 
     else:
-        print(f"ERROR: Choice '{ch}' is not valid (1-6).")
+        print(f"ERROR: Choice '{ch}' is not valid (1-7).")
 
 
     # Saving Changes
